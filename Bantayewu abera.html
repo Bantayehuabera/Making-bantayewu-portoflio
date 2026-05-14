@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BANTAYEHU ABERA | Digital Portfolio</title>
+    <style>
+        /* CSS Variables for theming */
+        :root {
+            --bg-color: #0b0f19;
+            --text-main: #94a3b8;
+            --text-light: #f8fafc;
+            --accent-primary: #3b82f6; /* Bright Blue */
+            --accent-secondary: #8b5cf6; /* Neon Purple */
+            --card-bg: #111827;
+            --border-color: #1f2937;
+        }
+
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+        }
+
+        /* Navigation */
+        header {
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(11, 15, 25, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-light);
+            text-decoration: none;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-primary);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            margin-bottom: 5rem;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+            line-height: 1.2;
+        }
+
+        /* Gradient Text */
+        .gradient-text {
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Content Layout */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* Cards */
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-primary);
+            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.1);
+        }
+
+        .card h2 {
+            color: var(--text-light);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Small decorative line for headers */
+        .card h2::before {
+            content: '';
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background: var(--accent-secondary);
+            border-radius: 50%;
+        }
+
+        .card-alt h2::before {
+            background: var(--accent-primary);
+        }
+
+        /* Tag Pills */
+        .tag-container {
+            margin-top: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--accent-primary);
+            padding: 0.4rem 1rem;
+            border-radius: 999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+
+        /* Simple Fade In Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">BANTAYEHU<span>ABERA</span></a>
+    </header>
+
+    <div class="container">
+        <section class="hero">
+            <h1>Exploring the <span class="gradient-text">Digital World</span> & Hard Sciences</h1>
+            <p>Grade 12 Student | STEM Enthusiast | Web3 Explorer</p>
+        </section>
+
+        <section class="grid-container">
+            <!-- About Me Card -->
+            <div class="card card-alt">
+                <h2>About Me</h2>
+                <p>
+                    I am a dedicated student with a rigorous focus on STEM subjects, particularly chemistry, physics, and maths. I love to study maths and physics especially, and I am highly proficient in them.
+                </p>
+                <br>
+                <p>
+                    Alongside my academic pursuits, I actively explore the Web3 ecosystem, analyzing digital assets and building a strong digital identity. I have a deep interest in learning and understanding the digital world, and I am committed to expanding my work within this digital landscape.
+                </p>
+                <div class="tag-container">
+                    <span class="tag">Web3</span>
+                    <span class="tag">Digital Assets</span>
+                    <span class="tag">Continuous Learner</span>
+                </div>
+            </div>
+
+            <!-- Academic Focus Card -->
+            <div class="card">
+                <h2>Academic Focus</h2>
+                <p>
+                    I consistently engage with complex problem sets in physics and maths because they are my favorite subjects. I actively involve myself in expanding my knowledge by studying various scientific books and analyzing educational videos from multiple sources.
+                </p>
+                <div class="tag-container">
+                    <span class="tag">Mathematics</span>
+                    <span class="tag">Physics</span>
+                    <span class="tag">Chemistry</span>
+                    <span class="tag">Problem Solving</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Bantayehu abera. Building the future in STEM and Web3.</p>
+    </footer>
+
+</body>
+</html>
